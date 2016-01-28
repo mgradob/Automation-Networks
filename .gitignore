@@ -1,0 +1,10 @@
+/Automation Networks.X/nbproject/private/
+Automation Networks.X/Makefile
+
+*.mk
+
+*.bash
+
+/Automation Networks.X/build/default/
+/Automation Networks.X/dist/default/
+*.properties
