@@ -5,7 +5,8 @@
  * Created on January 27, 2016, 11:24 PM
  */
 
-#include "config.h"
+#include "timer0.h"
+#include "uart.h"
 
 unsigned long msCount = 0; 
 
@@ -27,13 +28,18 @@ void main(void){
     configMcu();
     
     while(1){
-        
+        if(msCount == 1000){
+            msCount = 0;
+            
+            sendstr("HOLA MUNDO\n\r");
+        }
     }
 }
 
 void configMcu(void){
     // Configure Timer0
     timer0_config();
+    uart_config();
     
     INTCONbits.GIE = 1;
 }
