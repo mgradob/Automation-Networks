@@ -8,6 +8,8 @@
 #ifndef TIMER0_H
 #define	TIMER0_H
 
+#include "config.h"
+
 /**
  * Configure Timer0 as clock base.
  */

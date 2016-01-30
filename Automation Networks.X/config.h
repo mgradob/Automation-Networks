@@ -8,11 +8,10 @@
 #ifndef CONFIG_H
 #define	CONFIG_H
 
+// General libraries.
 #include <xc.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-#include "timer0.h"
 
 // CONFIG
 #pragma config FOSC = XT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT/T1OSO and RA7/OSC1/CLKIN/T1OSI)
@@ -26,7 +25,7 @@
 #pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
 
 /**
- * Configura el microcontrolador de manera general.
+ * General MCU configuration.
  */
 void configMcu(void);
 
