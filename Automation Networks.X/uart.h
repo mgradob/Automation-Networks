@@ -10,8 +10,10 @@
 
 #include "config.h"
 
+#define RX_BUF_SIZE     50
+
 /**
- * Configure Serial Comm.
+ * Configures the serial Comm.
  */
 void uart_config(void);
 
@@ -27,5 +29,26 @@ void send(unsigned char data);
  */
 void sendstr(unsigned char *string);
 
-#endif	/* UART_H */
+/**
+ * Saves a byte to the receive buffer.
+ * @param byte
+ */
+void saveByte(unsigned char byte);
 
+/**
+ * Reads a byte from the buffer.
+ * @return 
+ */
+unsigned char readBuffer(void);
+
+/**
+ * Moves to the next byte in the buffer.
+ */
+void nextByte(void);
+
+/**
+ * Clears the buffer and resets the index to the first position of the buffer.
+ */
+void clearBuffer(void);
+
+#endif	/* UART_H */
