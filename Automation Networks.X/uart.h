@@ -42,6 +42,12 @@ void saveByte(unsigned char byte);
 unsigned char readBuffer(void);
 
 /**
+ * Returns the buffer.
+ * @return 
+ */
+unsigned char * getBuffer(void);
+
+/**
  * Moves to the next byte in the buffer.
  */
 void nextByte(void);

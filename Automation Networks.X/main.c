@@ -11,6 +11,7 @@
 #include "uart.h"
 
 #include "task_helloworld.h"
+#include "task_slave.h"
 
 unsigned long msCount = 0; 
 
@@ -36,7 +37,8 @@ void main(void){
     configMcu();
     
     while(1){
-        run_helloworld(msCount);
+//        run_helloworld(msCount);
+        run_slave(msCount);
     }
 }
 
