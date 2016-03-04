@@ -10,6 +10,7 @@
       </logicalFolder>
       <logicalFolder name="f2" displayName="Tasks" projectFiles="true">
         <itemPath>task_helloworld.h</itemPath>
+        <itemPath>task_supertask.h</itemPath>
       </logicalFolder>
       <itemPath>config.h</itemPath>
     </logicalFolder>
@@ -26,6 +27,7 @@
       </logicalFolder>
       <logicalFolder name="f2" displayName="Tasks" projectFiles="true">
         <itemPath>task_helloworld.c</itemPath>
+        <itemPath>task_supertask.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

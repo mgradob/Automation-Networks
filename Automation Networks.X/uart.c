@@ -7,7 +7,7 @@
 
 #include "uart.h"
 
-static unsigned char RX_BUF[RX_BUF_SIZE];   // Buffer that contains the data 
+unsigned char RX_BUF[RX_BUF_SIZE];   // Buffer that contains the data 
                                             // received from the UART ISR.
 static unsigned char rx_index = 0;      // Index for the buffer.
 
@@ -38,6 +38,10 @@ void saveByte(unsigned char byte){
 
 unsigned char readBuffer(void){
     return RX_BUF[rx_index];
+}
+
+unsigned char * getBuffer(void){
+    return &RX_BUF;
 }
 
 void nextByte(void){

@@ -8,6 +8,8 @@
 #include "task_helloworld.h"
 #include "uart.h"
 
+//extern unsigned char RX_BUF[RX_BUF_SIZE];
+
 STATES taskState = SEND_TO_SLV_1;
 CMD_STATE cmdStateSlv1 = SEND_OFF;
 CMD_STATE cmdStateSlv2 = SEND_OFF;
@@ -17,8 +19,9 @@ void run_helloworld(unsigned long tick){
     
     if(tick-tickAux >= PERIOD_HELLOWORLD){
         tickAux = tick;
-      
-       
+        
+//        send(RX_BUF[0]);
+        
         switch(taskState){
             case SEND_TO_SLV_1:
                 if(cmdStateSlv1 == SEND_OFF){
